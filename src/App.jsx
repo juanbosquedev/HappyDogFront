@@ -13,8 +13,11 @@ const userLog = true;
       <NavBar logged={userLog} />
       <div className="container">
         <Login/>
+
+
+
         <Routes>
-          {/* <Route path="/Tienda" element={<Products logged={userLog} />}></Route> */}
+          
           {userLog && (
             <Route
               path="/Carrito"
