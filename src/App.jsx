@@ -6,7 +6,7 @@ import {Login} from "./components/login/Login"
 
 
 function App() {
-  // const userLog = useSelector((state) => state.userLogged.logged);
+
 const userLog = true;
   return (
     <>
