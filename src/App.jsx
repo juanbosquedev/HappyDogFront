@@ -1,35 +1,35 @@
+import { Route, Routes, Navigate } from "react-router-dom";
+import { NavBar } from "./components/Nav";
+import {Login} from "./components/login/Login"
+// import { Products } from "./components/Products";
+// import { useSelector } from "react-redux";
 
-import "./App.css";
-import { useSelector, useDispatch } from "react-redux";
-import { increase, decrease } from "./redux/actions/actionCreator";
 
 function App() {
-  const counter = useSelector((state) => state.counter);
-  const dispatch = useDispatch();
-  
-  const handleIncrease = () => {
-    dispatch(increase()); 
-  };
-  
-  const handleDecrease = () => {
-    dispatch(decrease()); 
-  };
-
+  // const userLog = useSelector((state) => state.userLogged.logged);
+const userLog = true;
   return (
     <>
-      
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={handleIncrease}>Increase</button> 
-        <button onClick={handleDecrease}>Decrease</button> 
-        count is {counter}
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <NavBar logged={userLog} />
+      <div className="container">
+        <Login/>
+        <Routes>
+          {/* <Route path="/Tienda" element={<Products logged={userLog} />}></Route> */}
+          {userLog && (
+            <Route
+              path="/Carrito"
+              // element={<Carrito logged={userLog} />}
+            ></Route>
+          )}
+          {userLog && (
+            <Route
+              path="/Pedidos"
+              // element={<Pedidos logged={userLog} />}
+            ></Route>
+          )}
+          <Route path="/*" element={<Navigate to="/Tienda"></Navigate>}></Route>
+        </Routes>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   );
 }
