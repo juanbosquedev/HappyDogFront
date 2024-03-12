@@ -21,7 +21,7 @@ const userLog = true;
           {userLog && (
             <Route
               path="/Carrito"
-              // element={<Carrito logged={userLog} />}
+           
             ></Route>
           )}
           {userLog && (
