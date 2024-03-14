@@ -1,22 +1,34 @@
 // reducer.js
-import { INCREASE, DECREASE } from "../actions/actionCreator";
+import { LOGIN, LOGOUT, REGISTER } from "../actions/actionCreator";
 
 const initialState = {
-  counter: 0,
+  userLogged: {
+    id: "",
+    name: "",
+    role: "",
+    logged: "",
+  },
+  registerState:"",
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case INCREASE:
+    case REGISTER:
       return {
         ...state,
-        counter: state.counter + 1,
+        registerState: action.payload,
+      };
+    case LOGIN:
+      return {
+        ...state,
+
+        userLogged: action.payload,
       };
 
-    case DECREASE:
+    case LOGOUT:
       return {
         ...state,
-        counter: state.counter - 1,
+        userLogged: action.payload,
       };
 
     default:
