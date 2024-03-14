@@ -1,38 +1,28 @@
 import { Route, Routes, Navigate } from "react-router-dom";
-import { NavBar } from "./components/Nav";
-import {Login} from "./components/login/Login"
-// import { Products } from "./components/Products";
-// import { useSelector } from "react-redux";
 
+import Login from "./components/log/Login";
+import RegisterPage from "./components/log/Register";
+import NavBar from "./components/navBar/NavBar";
+import { useSelector } from "react-redux";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useEffect } from "react";
 
 function App() {
 
-const userLog = true;
+  const userLog = useSelector((state) => state.userLogged.logged);
+  useEffect(()=>{},[userLog])
+ console.log(userLog, "userlog app")
   return (
     <>
-      <NavBar logged={userLog} />
-      <div className="container">
-        <Login/>
+      <NavBar userLog={userLog}/>
+      <Routes>
+      <Route exact path="/home" element={<App />}></Route>
 
+        <Route path="/entrar" element={<Login />}></Route>
+        <Route path="/registrarse" element={<RegisterPage />}></Route>
 
-
-        <Routes>
-          
-          {userLog && (
-            <Route
-              path="/Carrito"
-           
-            ></Route>
-          )}
-          {userLog && (
-            <Route
-              path="/Pedidos"
-              // element={<Pedidos logged={userLog} />}
-            ></Route>
-          )}
-          <Route path="/*" element={<Navigate to="/Tienda"></Navigate>}></Route>
-        </Routes>
-      </div>
+        <Route path="/*" element={<Navigate to="/home/*"></Navigate>}></Route>
+      </Routes>
     </>
   );
 }
