@@ -1,6 +1,6 @@
 .headNav {
-    position: fixed;
-    z-index: 1000;
+    /* position: fixed; */
+    /* z-index: 1000; */
     width: 100vw;
     display: flex;
     height: 5rem;
@@ -10,7 +10,7 @@
     border: solid 1px black;
   }
   .logo {
-    position: absolute;
+    /* position: absolute; */
     display: flex;
     left: 3rem;
     height: 3rem;

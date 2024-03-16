@@ -3,6 +3,11 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import Login from "./components/log/Login";
 import RegisterPage from "./components/log/Register";
 import NavBar from "./components/navBar/NavBar";
+import About from "./components/aboutUs/About";
+import Footer from "./components/footer/Footer";
+
+import MyCarousel from "./components/carousel/CarouselImg";
+
 import { useSelector } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect } from "react";
@@ -11,10 +16,13 @@ function App() {
 
   const userLog = useSelector((state) => state.userLogged.logged);
   useEffect(()=>{},[userLog])
- console.log(userLog, "userlog app")
+
   return (
     <>
       <NavBar userLog={userLog}/>
+      <About/>
+      {/* <MyCarousel/> */}
+      <Footer/>
       <Routes>
       <Route exact path="/home" element={<App />}></Route>
 
