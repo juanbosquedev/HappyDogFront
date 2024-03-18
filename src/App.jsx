@@ -5,6 +5,7 @@ import RegisterPage from "./components/log/Register";
 import NavBar from "./components/navBar/NavBar";
 import About from "./components/aboutUs/About";
 import Footer from "./components/footer/Footer";
+import Banner from "./componentes/banner/Banner"
 
 import MyCarousel from "./components/carousel/CarouselImg";
 
@@ -20,6 +21,7 @@ function App() {
   return (
     <>
       <NavBar userLog={userLog}/>
+      <Banner/>
       <About/>
       {/* <MyCarousel/> */}
       <Footer/>

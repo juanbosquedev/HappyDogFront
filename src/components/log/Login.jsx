@@ -31,7 +31,7 @@ function Login() {
             <div className="card-body p-0">
               {/* Nested Row within Card Body */}
               <div className="row">
-                <div className="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                <div className="col-lg-6 d-none d-lg-block bg-login-image"><img src="https://res.cloudinary.com/dzux3ynpe/image/upload/v1710649100/happydog/veez7lqfqp79tq2ugpmi.png" alt="loginImage"/></div>
                 <div className="col-lg-6">
                   <div className="p-5">
                     <div className="text-center">

@@ -41,7 +41,7 @@ const RegisterPage = () => {
         <div className="card-body p-0">
           {/* Nested Row within Card Body */}
           <div className="row">
-            <div className="col-lg-5 d-none d-lg-block bg-register-image"></div>
+            <div className="col-lg-5 d-none d-lg-block bg-register-image"><img src="https://res.cloudinary.com/dzux3ynpe/image/upload/v1710649108/happydog/for7tackfqs0aid4kzp0.png" alt="imageRegister"/></div>
             <div className="col-lg-7">
               <div className="p-5">
                 <div className="text-center">
