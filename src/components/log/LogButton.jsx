@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
-import DropdownButton from "react-bootstrap/DropdownButton";
-import Dropdown from "react-bootstrap/Dropdown";
+
+import { NavDropdown } from "react-bootstrap";
 
 import { Avatar } from "@mui/material";
 import { useDispatch } from "react-redux";
@@ -28,24 +28,25 @@ export default function Log({ userLog }) {
   return (
     <>
       {!userLog && (
-        <DropdownButton id="dropdown-basic-button" title="Adoptá">
-          <Dropdown.Item onClick={handleLogin}>Ingresá</Dropdown.Item>
-          <Dropdown.Item onClick={handleRegister}>Registrate</Dropdown.Item>
-        </DropdownButton>
+        <>
+          
+
+          <NavDropdown id="basic-nav-dropdown" className="">
+            <NavDropdown.Item onClick={handleLogin}>Ingresá</NavDropdown.Item>
+            <NavDropdown.Item onClick={handleRegister}>
+              Registrate
+            </NavDropdown.Item>
+          </NavDropdown>
+          <Avatar  />
+        </>
       )}
 
       {userLog && (
         <>
           <Avatar />
-
-          <DropdownButton
-            id="dropdown-basic-button"
-            className="p-0 m-0 "
-            variant="warning"
-            style={{ border: "none", size: "10px" }}
-          >
-            <Dropdown.Item onClick={handleLogout}>Salir</Dropdown.Item>
-          </DropdownButton>
+          <NavDropdown id="basic-nav-dropdown">
+            <NavDropdown.Item onClick={handleLogout}>Salir</NavDropdown.Item>
+          </NavDropdown>
         </>
       )}
     </>

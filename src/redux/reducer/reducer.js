@@ -6,7 +6,7 @@ const initialState = {
     id: "",
     name: "",
     role: "",
-    logged: "",
+    logged: true,
   },
   registerState:"",
 };

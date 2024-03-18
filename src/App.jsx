@@ -3,11 +3,11 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import Login from "./components/log/Login";
 import RegisterPage from "./components/log/Register";
 import NavBar from "./components/navBar/NavBar";
-import About from "./components/aboutUs/About";
-import Footer from "./components/footer/Footer";
-import Banner from "./componentes/banner/Banner"
+// import About from "./components/aboutUs/About";
+// import Footer from "./components/footer/Footer";
+import Banner from "./components/banner/Banner"
 
-import MyCarousel from "./components/carousel/CarouselImg";
+// import MyCarousel from "./components/carousel/CarouselImg";
 
 import { useSelector } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -21,18 +21,18 @@ function App() {
   return (
     <>
       <NavBar userLog={userLog}/>
-      <Banner/>
-      <About/>
-      {/* <MyCarousel/> */}
-      <Footer/>
       <Routes>
       <Route exact path="/home" element={<App />}></Route>
 
         <Route path="/entrar" element={<Login />}></Route>
         <Route path="/registrarse" element={<RegisterPage />}></Route>
 
-        <Route path="/*" element={<Navigate to="/home/*"></Navigate>}></Route>
+        <Route path="/*" element={<Navigate to="/"></Navigate>}></Route>
       </Routes>
+      <Banner />
+      {/* <About/> */}
+      {/* <MyCarousel/> */}
+      {/* <Footer/> */}
     </>
   );
 }

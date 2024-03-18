@@ -3,6 +3,13 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <div>
+
+      FOOTER 3 COLUMNAS  
+      UNA  CON LOS LINKS DEL 
+      DOS ADOPTA LINK A LA GALERIA ADOPTA
+     TRES REDES SOCIALES YOUTUBE TWIITER INSTAGRAM
+
+     ABAJO UNA LINEA CON UN COLOR UN POQUITO MÁS OPACO  LOGO DE COPYRIGTHS 2024 HAPPYD DOGS DERECHOS RESERVADOS
       <footer className="text-center text-lg-start bg-white text-muted">
         <section className="">
           <div className="container text-center text-md-start mt-1">
