@@ -69,6 +69,8 @@ const RegisterPage = () => {
   }, [registerState, navigate]);
 
   return (
+    <div className={Style.registerContainer}>
+
     <div
       className={`container-fluid  `}
       style={{ backgroundColor: "rgb(247, 249, 250)" }}
@@ -143,7 +145,7 @@ const RegisterPage = () => {
                       </div>
                       <button
                         type="submit"
-                        className="btn btn-primary btn-user btn-block mb-4"
+                        className="btn btn-primary btn-user btn-block mt-2 mb-4"
                       >
                         REGISTRESE
                       </button>
@@ -175,6 +177,7 @@ const RegisterPage = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
