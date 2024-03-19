@@ -1,33 +1,76 @@
+
 import Style from "./Banner.module.css";
-import CustomButton from "../customButton/CustomButton";
 
 function Banner() {
   return (
-   
+    <div id="home" className={`row ${Style.bannerMain} mt-5 pt-5 `}>
+      <div  className={`${Style.esferaContainer} col-6 `}>
 
-    <div id="home" className={`row  ${Style.bannerMain} `}>
-      <div className="col-6 imageC">
-        <div className={Style.esfera}>
+      <div >
+        <div className={`${Style.esfera} col-7 ms-5 mt-5`}>
           <img
-            className={Style.esferaImg}
+            
             src="https://res.cloudinary.com/dzux3ynpe/image/upload/v1710778779/happydog/maindoG_zdfhgp.png"
-            alt=""
+            alt="dogBannerImage"
           />
         </div>
       </div>
-
-      <div className="col-6 text-container">
+      </div>
+      <div className= {`col   text-container ${Style.textContainer}`}>
+        <div
+          className="col  "
+       
+     
+        >
+          <p
+          className="lh-2 "
+            style={{
+           
+              fontFamily: "Volkhov",
+              fontWeight: 700,
+             
+              fontSize: "50px",
+              color: "#222222",
+            }}
+          >
+            DONDE LOS PERROS CONSIGUEN HOGAR
+            <span style={{ color: "rgb(129, 204, 176)" }}> HAPPY DOG!</span>
+          </p>
+          <p
+            className={ `lh-1  ${Style.textContainerPdos}`}
+            style={{
+            
+              fontFamily: "Poppins",
+              fontWeight: 400,
+            
+              fontSize: "20px",
+              color: "#666",
+            }}
+          >
+            Somos una comunidad en la que solucionamos la
+            búsqueda y adopction de nuestros perros; haciendo seguimiento de
+            guarda responsable.
+          </p>
+          <button
+            className="btn align-bottom mt-5"
+            style={{
+             
+              fontSize: "18px",
+              color: "rgb(129, 204, 176)",
+              borderRadius: "5px",
+              border: "1px solid rgb(129, 204, 176)",
+              height: "60px",
+              width: "178px",
+              backgroundColor: "#ffffff",
+            }}
+          >
+            ADOPTA
+          </button>
+        </div>
         <h1 className={Style.titulo}>
-
-          AYUDANOS A AYUDAR!
-          EN HAPPY DOGS DONDE NUESTROS PERROS CONSIGUEN HOGAR
-          SUMATE!
-          <button>adoptar button</button>
-          DONDE <br /> NUESTROS PERROS
+          <br />
         </h1>
-        <h2 className={Style.subtitulo}>CONSIGUEN HOGAR</h2>
-
-        <CustomButton color="rgb(129, 204, 176) " size={26} content="Hola" />
+        <h2 className={Style.subtitulo}></h2>
       </div>
     </div>
   );

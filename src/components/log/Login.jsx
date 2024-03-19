@@ -49,7 +49,7 @@ function Login() {
         style={{ backgroundColor: "rgb(247, 249, 250)" }}
       >
         {/* Outer Row */}
-        <div className="row justify-content-center">
+        <div className= {`row justify-content-center ${Style.loginContainer}`}>
           <div className="col-xl-10 col-lg-12 col-md-9">
             <div className="card o-hidden border-0 shadow-lg my-5">
               <div className="card-body p-0">

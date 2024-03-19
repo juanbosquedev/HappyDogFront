@@ -12,11 +12,11 @@ export default function NavBar({ entering, userLog }) {
   useEffect(() => {}, [userLog]);
 
   return (
-    <Navbar className={`${Style.headNav} bg-body-tertiary`}>
+    <Navbar className={`${Style.headNav} fixed-top bg-body-tertiary`}>
       <Container className="col-10 pt-3 ms-5">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav ">
-          <Nav className="col-12 pt-2">
+          <Nav className="col-12 ps-4 pt-2">
             <Log userLog={userLog}></Log>
             <Nav.Link className="ms-5" href="#home" disabled={entering}>
               INICIO
@@ -36,7 +36,7 @@ export default function NavBar({ entering, userLog }) {
               DAR EN ADOPCIÓN
             </Nav.Link>
           </Nav>
-          <Navbar.Brand className="ms-5 pt-0" href="#home">
+          <Navbar.Brand className="ms-5 ps-3 pt-0" href="#home">
             <img
               style={{ height: "55px" }}
               src="https://res.cloudinary.com/dzux3ynpe/image/upload/v1710794343/happydog/logoColor_acvpra.png"
