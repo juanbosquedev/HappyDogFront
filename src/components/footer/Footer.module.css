@@ -1,0 +1,9 @@
+footer{
+    background-color:rgb(153, 209, 160);
+    color:aliceblue;
+};
+
+footer>a {
+       color:rgb(121, 172, 127);
+
+}
