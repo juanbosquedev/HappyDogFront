@@ -1,5 +1,5 @@
 // reducer.js
-import { LOGIN, LOGOUT, REGISTER } from "../actions/actionCreator";
+import { LOGIN, LOGIN_ERROR, LOGOUT, REGISTER } from "../actions/actionCreator";
 
 const initialState = {
   userLogged: {
@@ -8,6 +8,7 @@ const initialState = {
     role: "",
     logged: "",
   },
+  logError:"",
   registerState:"",
 };
 
@@ -24,6 +25,13 @@ const reducer = (state = initialState, action) => {
 
         userLogged: action.payload,
       };
+
+      case LOGIN_ERROR:
+        return {
+          ...state,
+  
+          logError: action.payload,
+        };
 
     case LOGOUT:
       return {
