@@ -1,5 +1,7 @@
 // actions.js
 export const LOGIN = "LOGIN";
+export const LOGIN_ERROR = "LOGIN_ERROR";
+
 export const LOGOUT = "LOGOUT";
 export const REGISTER = "REGISTER";
 export const ALLDOGS = "ALLDOGS";
@@ -14,11 +16,16 @@ const API = import.meta.env.VITE_API_URL;
 export function userLog(user) {
   return async function (dispatch) {
     try {
+
       const { data } = await axios.post(`${API}userLogin`, user);
+      alert([...data])
+
       return dispatch({ type: LOGIN, payload: data });
     } catch (error) {
+      console.log(error)
       return dispatch({
-        type: LOGIN,
+        
+        type: LOGIN_ERROR,
         payload: error,
       });
     }

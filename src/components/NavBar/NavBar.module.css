@@ -1,8 +1,12 @@
 .headNav {
-
+    display: flex;
     align-items: center;
     font-family: 'Inknut Antiqua', serif!important;
     font-size: 15px;
  
+  }
+
+  Container{
+    background-color: red;
   }
 

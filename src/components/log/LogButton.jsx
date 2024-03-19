@@ -43,10 +43,10 @@ export default function Log({ userLog }) {
 
       {userLog && (
         <>
-          <Avatar />
           <NavDropdown id="basic-nav-dropdown">
             <NavDropdown.Item onClick={handleLogout}>Salir</NavDropdown.Item>
           </NavDropdown>
+          <Avatar />
         </>
       )}
     </>
