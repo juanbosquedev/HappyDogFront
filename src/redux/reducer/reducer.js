@@ -1,5 +1,6 @@
 // reducer.js
-import { LOGIN, LOGIN_ERROR, LOGOUT, REGISTER } from "../actions/actionCreator";
+
+import { LOGIN, LOGIN_ERROR, LOGOUT, REGISTER, ALLDOGS, NEWDOG, DELETE_DOG, UPDATE_DOG, UPDATE_DOG_ERROR } from "../actions/actionCreator";
 
 const initialState = {
   userLogged: {
@@ -8,8 +9,9 @@ const initialState = {
     role: "",
     logged: false,
   },
-  logError:"",
-  registerState:"",
+  logError: "",
+  registerState: "",
+  dogs: [],
 };
 
 const reducer = (state = initialState, action) => {
@@ -22,23 +24,44 @@ const reducer = (state = initialState, action) => {
     case LOGIN:
       return {
         ...state,
-
         userLogged: action.payload,
       };
-
-      case LOGIN_ERROR:
-        return {
-          ...state,
-  
-          logError: action.payload,
-        };
-
+    case LOGIN_ERROR:
+      return {
+        ...state,
+        logError: action.payload,
+      };
     case LOGOUT:
       return {
         ...state,
         userLogged: action.payload,
       };
-
+    case ALLDOGS:
+      return {
+        ...state,
+        dogs: action.payload,
+      };
+    case NEWDOG:
+      return {
+        ...state,
+        dogs: state.dogs.concat(action.payload),
+      };
+    case DELETE_DOG:
+      return {
+        ...state,
+        dogs: state.dogs.filter((dog) => dog.id !== action.payload.id),
+      };
+    case UPDATE_DOG:
+      return {
+        ...state,
+        updatedDog: action.payload,
+      };
+        
+    case UPDATE_DOG_ERROR:
+      return {
+        ...state,
+        updateDogError: action.payload,
+      };
     default:
       return state;
   }
