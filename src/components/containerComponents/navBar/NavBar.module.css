@@ -1,0 +1,13 @@
+.headNav {
+    display: flex;
+    align-items: center;
+    font-family: 'Inknut Antiqua', serif!important;
+    font-size: 15px;
+ 
+  }
+.navHead{
+  color:rgb(151, 209, 159);
+  margin-left:-40px;
+}
+
+
