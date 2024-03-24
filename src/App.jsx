@@ -1,9 +1,10 @@
 import { Route, Routes, Navigate, useLocation } from "react-router-dom";
 
-import Login from "./components/log/Login";
-import RegisterPage from "./components/log/Register";
-import NavBar from "./components/navBar/NavBar";
-import Banner from "./components/banner/Banner";
+import Login from "./components/containerComponents/log/Login";
+import RegisterPage from "./components/containerComponents/log/Register";
+import NavBar from "./components/containerComponents/navBar/NavBar";
+import Home from "./components/containerComponents/home/Home";
+
 import { useSelector } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect, useState } from "react";
@@ -14,8 +15,10 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    // Verificar si el usuario está en la ruta /entrar o /registrarse
-    if (location.pathname === "/entrar" || location.pathname === "/registrarse") {
+    if (
+      location.pathname === "/entrar" ||
+      location.pathname === "/registrarse"
+    ) {
       setEntering(true);
     } else {
       setEntering(false);
@@ -26,11 +29,16 @@ function App() {
     <>
       <NavBar userLog={userLog} entering={entering} />
       <Routes>
-        <Route exact path="/entrar" element={<Login setEntering={setEntering}/>} />
+        <Route exact path="/" element={<Home />} />
+
+        <Route
+          exact
+          path="/entrar"
+          element={<Login userLog={userLog} setEntering={setEntering} />}
+        />
         <Route path="/registrarse" element={<RegisterPage />} />
         <Route path="/*" element={<Navigate to="/" />} />
       </Routes>
-      <Banner />
     </>
   );
 }

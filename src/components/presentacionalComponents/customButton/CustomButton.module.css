@@ -1,0 +1,14 @@
+/* CustomButton.module.css */
+
+.effect {
+    /* Estilos base del botón */
+
+    transition: background-color 0.3s ease, color 0.3s ease !important; 
+  }
+  
+  .effect:hover {
+    /* Estilos para el hover del botón */
+    background-color: rgb(186, 245, 225) !important;
+    color: rgb(243, 245, 247) !important;
+  }
+  
