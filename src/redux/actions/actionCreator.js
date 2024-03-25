@@ -60,24 +60,10 @@ export function register(user) {
 
 //DOGS
 
-// const getConfig = () => {
-//   const cook = document.cookie;
-
-//   const tokenIndex = cook.indexOf("token=");
-
-//   const token = cook.substring(tokenIndex).replace("token=", "");
-//   return {
-//     header: {
-//       "authorization": token,
-//     },
-//   };
-// };
-
 export function getDogs() {
   return async function (dispatch) {
     try {
       const { data } = await axios.get(`${API}allDogs`);
-      console.log(data, " soy data en getDogs");
       return dispatch({ type: ALLDOGS, payload: data });
     } catch (error) {
       return dispatch({
@@ -88,40 +74,6 @@ export function getDogs() {
   };
 }
 
-// export function newDog(dog) {
-//   return async function (dispatch) {
-//     try {
-//       const { data } = await axios.post(`${API}newDog`, dog, getConfig());
-//       return dispatch({ type: NEWDOG, payload: data });
-//     } catch (error) {
-//       return dispatch({ type: NEWDOG_ERROR, payload: error });
-//     }
-//   };
-// }
-
-// export function deleteDog(dogId) {
-//   return async function (dispatch) {
-//     try {
-//       const { data } = await axios.delete(`${API}dogDelete/${dogId}`, getConfig());
-//       return dispatch({ type: DELETE_DOG, payload: data });
-//     } catch (error) {
-//       return dispatch({ type: DELETE_DOG_ERROR, payload: error });
-//     }
-//   };
-// }
-
-// export function updateDog(updatedDog) {
-//   return async function (dispatch) {
-//     try {
-//       const { data } = await axios.put(`${API}updateDog/${updatedDog.id}`, updatedDog, getConfig());
-//       return dispatch({ type: UPDATE_DOG, payload: data.succes });
-//     } catch (error) {
-//       return dispatch({ type: UPDATE_DOG_ERROR, payload: error });
-//     }
-//   };
-// }
-
-//DOGS SIN TOKEN
 export function newDog(dog) {
   return async function (dispatch) {
     try {
@@ -157,7 +109,7 @@ export function updateDog(updatedDog) {
         `${API}updateDog/${updatedDog.id}`,
         updatedDog
       );
-      return dispatch({ type: UPDATE_DOG, payload: data.succes });
+      return dispatch({ type: UPDATE_DOG, payload: data.dog });
     } catch (error) {
       return dispatch({
         type: UPDATE_DOG_ERROR,
@@ -166,3 +118,54 @@ export function updateDog(updatedDog) {
     }
   };
 }
+
+// const getConfig = () => {
+//   const cook = document.cookie;
+
+//   const tokenIndex = cook.indexOf("token=");
+
+//   const token = cook.substring(tokenIndex).replace("token=", "");
+//   return {
+//     header: {
+//       "authorization": token,
+//     },
+//   };
+// };
+
+
+
+// export function newDog(dog) {
+//   return async function (dispatch) {
+//     try {
+//       const { data } = await axios.post(`${API}newDog`, dog, getConfig());
+//       return dispatch({ type: NEWDOG, payload: data });
+//     } catch (error) {
+//       return dispatch({ type: NEWDOG_ERROR, payload: error });
+//     }
+//   };
+// }
+
+// export function deleteDog(dogId) {
+//   return async function (dispatch) {
+//     try {
+//       const { data } = await axios.delete(`${API}dogDelete/${dogId}`, getConfig());
+//       return dispatch({ type: DELETE_DOG, payload: data });
+//     } catch (error) {
+//       return dispatch({ type: DELETE_DOG_ERROR, payload: error });
+//     }
+//   };
+// }
+
+// export function updateDog(updatedDog) {
+//   return async function (dispatch) {
+//     try {
+//       const { data } = await axios.put(`${API}updateDog/${updatedDog.id}`, updatedDog, getConfig());
+//       return dispatch({ type: UPDATE_DOG, payload: data.succes });
+//     } catch (error) {
+//       return dispatch({ type: UPDATE_DOG_ERROR, payload: error });
+//     }
+//   };
+// }
+
+//DOGS SIN TOKEN
+
