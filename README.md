@@ -30,7 +30,7 @@ Para configurar las variables de entorno necesarias para el funcionamiento del f
 2. Agrega la siguiente variable de entorno según corresponda:
 
    Para consumir la API externa (backend desplegado):
-   ```plaintext
+
    VITE_API_URL=https://happydogapi.onrender.com/
 
       Para consumir la API localmente:
@@ -46,7 +46,7 @@ npm run dev
 ```
 
 
-#### Technologies Used
+#### Technologias utilizadas
 
 - HTML
 - CSS
