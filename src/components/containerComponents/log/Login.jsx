@@ -2,7 +2,7 @@ import Style from "./Login.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import { userLog } from "../../../redux/actions/actionCreator";
-import { Navigate } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
 
 function Login() {
   const dispatch = useDispatch();
@@ -111,17 +111,17 @@ function Login() {
                         </div>
                       </form>
                       <div className="text-center">
-                        <a className="small text-decoration-none" href="/">
+                        <Link className="small text-decoration-none" to="/">
                           Menú principal
-                        </a>
+                        </Link>
                       </div>
                       <div className="text-center">
-                        <a
+                        <Link
                           className="small text-decoration-none"
-                          href="/registrarse"
+                          to="/registrarse"
                         >
                           Creá una cuenta!
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
