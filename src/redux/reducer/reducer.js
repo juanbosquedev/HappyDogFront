@@ -1,4 +1,3 @@
-// reducer.js
 
 import {
   LOGIN,
@@ -46,7 +45,7 @@ const reducer = (state = initialState, action) => {
     case LOGOUT:
       return {
         ...state,
-        userLogged: action.payload,
+        userLogged:  action.payload,
       };
     case ALLDOGS:
       return {
@@ -75,25 +74,6 @@ const reducer = (state = initialState, action) => {
         dogs: updatedDogs,
       };
     }
-
-    //
-    // const updatedDog = action.payload;
-    // const dogIndex = state.dogs.findIndex(dog => dog.id === updatedDog.id);
-
-    // if (dogIndex !== -1) {
-    //   const updatedDogs = [...state.dogs]; // Copia el array de perros para no mutar el estado directamente
-    //   updatedDogs.splice(dogIndex, 1, updatedDog); // Reemplaza el perro antiguo con el perro actualizado en la posición correcta
-    //   console.log(updatedDogs, "actualizado");
-
-    //   // Devuelve el nuevo estado con el array de perros actualizado
-    //   return {
-    //     ...state,
-    //     dogs: updatedDogs
-    //   };
-    // } else {
-    //   // Si no se encontró el perro, simplemente devuelve el estado actual sin cambios
-    //   return state;
-    // }
 
     case UPDATE_DOG_ERROR:
       return {

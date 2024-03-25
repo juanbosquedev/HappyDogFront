@@ -9,11 +9,6 @@ function Login() {
   const userLogg = useSelector((state) => state.userLogged.logged);
   const logError = useSelector((state) => state.logError);
 
-
-
-  
-
-
   const [formData, setFormData] = useState({
     email: "",
     password: "",
