@@ -9,6 +9,11 @@ function Login() {
   const userLogg = useSelector((state) => state.userLogged.logged);
   const logError = useSelector((state) => state.logError);
 
+
+
+  
+
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -99,16 +104,16 @@ function Login() {
                         >
                           Ingresar
                         </button>
-                        <hr />
-
                         <div style={{ height: "10px" }}>
                           {logError && (
                             <p>
-                              {logError.error}
-                              <hr />
+                              {logError?.response?.data?.error}
+                           
                             </p>
                           )}
-                        </div>
+                          </div>
+                        <hr />
+
                       </form>
                       <div className="text-center">
                         <Link className="small text-decoration-none" to="/">
