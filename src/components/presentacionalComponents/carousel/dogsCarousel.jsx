@@ -24,10 +24,8 @@ function DogsCarousel() {
         className="carousel slide  pt-5 mt-5"
         style={{ height: "80vh" }}
       >
-    
         <Carousel className="carousel-inner  ">
-        
-          {dogs &&
+          {dogs ? (
             dogs?.map(
               (dog, index) =>
                 index % 3 === 0 && (
@@ -43,10 +41,13 @@ function DogsCarousel() {
                     </div>
                   </Carousel.Item>
                 )
-            )}
-   
+            )
+          ) : (
+            <p >
+              <span>Cargando...</span>
+            </p>
+          )}
         </Carousel>
-        
       </div>
     </div>
   );
