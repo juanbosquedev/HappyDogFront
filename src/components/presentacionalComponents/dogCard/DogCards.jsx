@@ -32,7 +32,7 @@ function DogCard({
         <div
 
         >
-          <Card.Img variant="top" className="card-img-top" src={image} style={{ width: "18rem", height:"14rem"}}/>
+          <Card.Img variant="top" className="card-img-top" src={image} style={{ width: "18rem", height:"16rem"}}/>
         </div>
       </div>
       <div className="p-3" style={{backgroundColor:"rgb(240, 250, 255)"}}>
