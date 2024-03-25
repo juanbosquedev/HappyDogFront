@@ -30,7 +30,6 @@ function Login() {
       event.preventDefault();
     };
     window.addEventListener("popstate", handleBlockedNavigation);
-
     return () => {
       document.body.style.overflowY = "auto";
 
