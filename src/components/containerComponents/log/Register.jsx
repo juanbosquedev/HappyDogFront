@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { register } from "../../../redux/actions/actionCreator";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Style from "./Register.module.css";
 
 const RegisterPage = () => {
@@ -157,14 +157,14 @@ const RegisterPage = () => {
                       <hr />
 
                       <div className="text-center mt-5">
-                        <a className="small text-decoration-none" href="/">
+                        <Link className="small text-decoration-none" href="/">
                           Menú principal
-                        </a>
+                        </Link>
                       </div>
                       <div className="text-center">
-                        <a className="small text-decoration-none" href="entrar">
+                        <Link className="small text-decoration-none" href="entrar">
                           Ya tienes una cuenta? Acreditate!
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
