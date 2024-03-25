@@ -48,7 +48,8 @@ export default function Log({ userLog }) {
         <>
           <Dropdown>
             <Dropdown.Toggle
-              variant="success"
+            className="border border-danger"
+              variant="light"
               id="dropdown-basic"
               onClick={handleLogout}
             >
