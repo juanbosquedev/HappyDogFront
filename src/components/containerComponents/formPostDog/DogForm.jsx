@@ -16,6 +16,7 @@ export const DogForm = ({ handleClose, dog, editable, createDog }) => {
   const userId = useSelector((state) => state.userLogged.id);
 
   const dogs = useSelector((state) => state.dogs);
+
   const contactInfo = dogs.filter((dogy) => dogy.dataValues.id === dog.id);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -78,9 +79,12 @@ export const DogForm = ({ handleClose, dog, editable, createDog }) => {
       dispatch(newDog(dogData));
     }
     handleClose();
+    dispatch(getDogs());
+
   };
   const handleUpdate = () => {
     dispatch(updateDog(dogData));
+    dispatch(getDogs());
     handleClose();
   };
   const handleDelete = () => {

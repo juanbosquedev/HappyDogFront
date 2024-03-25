@@ -28,7 +28,7 @@ function DogsCarousel() {
         <Carousel className="carousel-inner  ">
         
           {dogs &&
-            dogs.map(
+            dogs?.map(
               (dog, index) =>
                 index % 3 === 0 && (
                   <Carousel.Item key={index}>
