@@ -157,13 +157,13 @@ const RegisterPage = () => {
                       <hr />
 
                       <div className="text-center mt-5">
-                        <Link className="small text-decoration-none" href="/">
+                        <Link className="small text-decoration-none" to="/">
                           Menú principal
                         </Link>
                       </div>
-                      
+
                       <div className="text-center">
-                        <Link className="small text-decoration-none" href="entrar">
+                        <Link className="small text-decoration-none" to="entrar">
                           Ya tienes una cuenta? Acreditate!
                         </Link>
                       </div>
