@@ -161,6 +161,7 @@ const RegisterPage = () => {
                           Menú principal
                         </Link>
                       </div>
+                      
                       <div className="text-center">
                         <Link className="small text-decoration-none" href="entrar">
                           Ya tienes una cuenta? Acreditate!
