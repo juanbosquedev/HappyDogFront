@@ -1,8 +1,64 @@
-# React + Vite
+# Happy Dog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
+Happy Dog es una aplicación de escritorio diseñada para ayudar a las personas a encontrar perros para adoptar. La aplicación cuenta con funcionalidades de registro, inicio de sesión, navegación, publicación de perros en adopción, edición y eliminación de publicaciones. Además, ofrece una sección informativa sobre la aplicación y un carrusel de imágenes de perros disponibles para adoptar.
 
-Currently, two official plugins are available:
+## Despliegue
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+El frontend de Happy Dog está desplegado en la siguiente dirección: [Happy Dog Frontend](https://happy-dog-front.vercel.app/)
+
+## Instrucciones de Inicio
+
+### 1. Clonar el Repositorio
+
+```bash
+git clone https://github.com/juanbosquedev/HappyDogFront.git
+```
+### 2. Instalar Dependencias
+
+ - Run the following command to install dependencies:
+     ```bash
+     npm install
+     ```
+     
+### Configuración de Variables de Entorno
+
+Para configurar las variables de entorno necesarias para el funcionamiento del frontend de HappyDogFront, sigue estos pasos:
+
+1. Crea un archivo llamado `.env` en la raíz de la carpeta HappyDogFront.
+
+2. Agrega la siguiente variable de entorno según corresponda:
+
+   Para consumir la API externa (backend desplegado):
+   ```plaintext
+   VITE_API_URL=https://happydogapi.onrender.com/
+
+      Para consumir la API localmente:
+   ```plaintext
+   VITE_API_URL=http://localhost:8000/
+
+### 3. Ejecutar la Aplicación
+
+Una vez que se hayan instalado las dependencias y configurado las variables de entorno, (encender la API en caso de que sea local), puedes iniciar la aplicación con el siguiente comando:
+
+```bash
+npm run dev
+```
+
+
+#### Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- React
+- Redux
+- React-Bootstrap
+- MaterialUI
+- Bootstrap
+
+---
+
+
+
+
