@@ -4,7 +4,7 @@ import DogCard from "../dogCard/DogCards";
 import { getDogs } from "../../../redux/actions/actionCreator";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import Style from "./FackeCarousel.module.css";
+import Style from "./FackeCarouse.module.css";
 
 export const FakeCarousel = () => {
   const dispatch = useDispatch();

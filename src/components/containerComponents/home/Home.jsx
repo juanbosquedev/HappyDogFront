@@ -1,4 +1,3 @@
-// import { FakeCarousel } from "../../presentacionalComponents/fackeCarousel/FakeCarousel";
 import Banner from "../../presentacionalComponents/banner/Banner";
 import About from "../../presentacionalComponents/aboutUs/About";
 import {OurPage} from "../../presentacionalComponents/OurPage/OurPage";
@@ -74,7 +73,6 @@ function Home() {
       <About />
       <OurPage />
       <DogsCarousel />
-      {/* <FakeCarousel/> */}
       <Footer />
       {modalContent}
     </div>
