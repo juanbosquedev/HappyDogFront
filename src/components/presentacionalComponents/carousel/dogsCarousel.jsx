@@ -36,7 +36,7 @@ export const DogsCarousel = () => {
   };
 
   return (
-    <div id="adopt" className={`${Style.carouselMain} ps-5 pt-5 mt-5 `}>
+    <div id="adopt" className={`${Style.carouselMain}  `}>
       <Carousel
         responsive={responsive}
         containerClass="carousel-container"
@@ -44,8 +44,8 @@ export const DogsCarousel = () => {
         infinite={true}
         arrows={true}
         autoPlay={true}          
-        autoPlaySpeed={2000}     
-        pauseOnHover={false}     
+        autoPlaySpeed={3000}     
+        pauseOnHover={true}     
         transitionDuration={350} 
       >
         {renderedDogs.length > 0 ? (
@@ -55,7 +55,7 @@ export const DogsCarousel = () => {
             </div>
           ))
         ) : (
-          <p>Cargando...</p>
+          <p >Cargando...</p>
         )}
       </Carousel>
     </div>
