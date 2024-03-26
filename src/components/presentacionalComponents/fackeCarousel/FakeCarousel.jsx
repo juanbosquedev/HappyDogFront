@@ -1,22 +1,18 @@
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 import DogCard from "../dogCard/DogCards";
 import { getDogs } from "../../../redux/actions/actionCreator";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useState } from "react";
-import Style from "./DogsCarousel.module.css";
+import { useEffect } from "react";
+import Style from "./FackeCarousel.module.css";
 
-export const DogsCarousel = () => {
+export const FakeCarousel = () => {
   const dispatch = useDispatch();
   const dogs = useSelector((state) => state.dogs);
-  const [renderedDogs, setRenderedDogs] = useState([]);
 
   useEffect(() => {
     if (dogs.length === 0) {
       dispatch(getDogs());
-    } else {
-      const reversedDogs = dogs.slice().reverse();
-      setRenderedDogs(reversedDogs);
     }
   }, [dogs, dispatch]);
 
@@ -41,15 +37,9 @@ export const DogsCarousel = () => {
         responsive={responsive}
         containerClass="carousel-container"
         itemClass="carousel-item-padding-40-px"
-        infinite={true}
-        arrows={true}
-        autoPlay={true}          
-        autoPlaySpeed={2000}     
-        pauseOnHover={false}     
-        transitionDuration={350} 
       >
-        {renderedDogs.length > 0 ? (
-          renderedDogs.map((dog, index) => (
+        {dogs ? (
+          dogs.map((dog, index) => (
             <div key={index}>
               <DogCard {...dog.dataValues} />
             </div>

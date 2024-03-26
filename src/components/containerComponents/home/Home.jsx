@@ -1,8 +1,8 @@
-
+// import { FakeCarousel } from "../../presentacionalComponents/fackeCarousel/FakeCarousel";
 import Banner from "../../presentacionalComponents/banner/Banner";
 import About from "../../presentacionalComponents/aboutUs/About";
 import {OurPage} from "../../presentacionalComponents/OurPage/OurPage";
-import DogsCarousel from "../../presentacionalComponents/carousel/dogsCarousel";
+import {DogsCarousel} from "../../presentacionalComponents/carousel/DogsCarousel";
 import Footer from "../../presentacionalComponents/footer/Footer";
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
@@ -74,6 +74,7 @@ function Home() {
       <About />
       <OurPage />
       <DogsCarousel />
+      {/* <FakeCarousel/> */}
       <Footer />
       {modalContent}
     </div>
