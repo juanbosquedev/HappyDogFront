@@ -1,7 +1,7 @@
 import Banner from "../../presentacionalComponents/banner/Banner";
 import About from "../../presentacionalComponents/aboutUs/About";
 import {OurPage} from "../../presentacionalComponents/OurPage/OurPage";
-import {DogsCarousel} from "../../presentacionalComponents/carousel/DogsCarousel";
+import {DogsCarousel} from "../../presentacionalComponents/carousel/dogsCarousel";
 import Footer from "../../presentacionalComponents/footer/Footer";
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
