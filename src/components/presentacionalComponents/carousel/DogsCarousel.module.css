@@ -1,7 +1,6 @@
 .carouselMain{
-    display:flex;
-    align-content: center;
-    padding-top: 8%;
+
+    padding-top: 15%;
     height: 100vh;
     background-color: hsl(160, 18%, 93%);
     box-shadow: 10px 10px 202px -1px rgba(127,235,199,0.75);

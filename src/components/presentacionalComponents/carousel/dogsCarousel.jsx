@@ -37,6 +37,7 @@ export const DogsCarousel = () => {
 
   return (
     <div id="adopt" className={`${Style.carouselMain}  `}>
+      
       <Carousel
         responsive={responsive}
         containerClass="carousel-container"
@@ -55,7 +56,7 @@ export const DogsCarousel = () => {
             </div>
           ))
         ) : (
-          <p >Cargando...</p>
+          <p className="d-flex justify-content-center alignt-text-center" style={{width:"100vw", height:"100vh", fontSize:"40px", fontWeight:"700" }} >Cargando...</p>
         )}
       </Carousel>
     </div>
