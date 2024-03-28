@@ -61,6 +61,7 @@ npm run dev
 - React-Bootstrap
 - MaterialUI
 - Bootstrap
+- JWT
 
 ---
 
