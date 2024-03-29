@@ -4,7 +4,7 @@ const CustomButton = () => {
     <div>
       <a href="#adopt">
         <button
-          className={`${Style.effect} btn align-bottom mt-5`}
+          className={`${Style.effect} btn align-bottom `}
           style={{
             fontSize: "18px",
             color: "rgb(129, 204, 176)",
