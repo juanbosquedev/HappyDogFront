@@ -13,16 +13,14 @@ import { useSelector } from "react-redux";
 export default function NavBar({ entering, userLog }) {
   useEffect(() => {}, [userLog]);
   const userLogg = useSelector((state) => state.userLogged.logged);
-  
+
   const [show, setShow] = useState(false);
   const isCurrentUserOwner = false;
 
   const handleClose = () => setShow(false);
- 
+
   const handleShow = () => {
     if (userLogg) {
-   
-
       setShow(true);
     } else {
       Swal.fire({
@@ -36,32 +34,49 @@ export default function NavBar({ entering, userLog }) {
 
   return (
     <Navbar className={`${Style.headNav} fixed-top bg-body-tertiary`}>
-      <Container className="col-10 pt-3 ms-5">
+      <Container className="col-lg-10 col-md-10 col-sm-10 pt-3 ms-md-5 ms-sm-1">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav ">
-          <Nav className="col-12 ps-4 pt-2">
+          <Nav className="col-lg-12 col-md-10 col-sm-10 col-10 ps-lg-4 ps-md-1 ps-sm-1 pt-2">
             <Log userLog={userLog}></Log>
-            <Nav.Link className="ms-5" href="#home" disabled={entering}>
+            <Nav.Link
+              className={`ms-lg-5 ${Style.hider}`}
+              href="#home"
+              disabled={entering}
+            >
               INICIO
             </Nav.Link>
-            <Nav.Link className="me-2" href="#adopt" disabled={entering}>
+            <Nav.Link
+              className={`me-2 ${Style.hider}`}
+              href="#adopt"
+              disabled={entering}
+            >
               ADOPTAR
             </Nav.Link>
-            <Nav.Link className="me-0 col-2" href="#about" disabled={entering}>
+            <Nav.Link
+              className={`me-0 col-lg-3   ${Style.hider}`}
+              href="#about"
+              disabled={entering}
+            >
               QUIENES SOMOS
             </Nav.Link>
 
             <Nav.Link
-              className="me-0 col-3"
+              className="me-0 col-lg-3 col-md-5 col-sm-5"
               onClick={handleShow}
               disabled={entering}
             >
               DAR EN ADOPCIÓN
             </Nav.Link>
           </Nav>
-          <Navbar.Brand className="ms-5 ps-3 pt-0 d-flex align-items-end pe-5 " href="#adopt">
-            <h6 className={Style.navHead}>
-              Happy <br/>Dog
+          <Navbar.Brand
+            className="ms-lg-5 ms-md-2 ms-sm-1 ps-lg-3 ps-md-3 pt-0 d-flex align-items-end pe-lg-5 pe-md-1  "
+            href="#adopt"
+          >
+            <h6 className={`${Style.navHead} ${Style.hider}`}>
+             
+              Happy <br />
+              Dog
             </h6>
             <img
               style={{ height: "55px" }}
