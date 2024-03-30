@@ -1,8 +1,16 @@
+.aboutContainer {
+  height: "95vh";
+  width: "100vw"!important;
+  display: flex;
+  justify-content: center !important;
+  background-color: "#FFFBEA";
+}
+
 .aboutHeader {
- display: flex;
+
  padding-top: 20vh;
   width: 30vw;
-  display: block;
+
   margin: auto;
   font-weight: 400;
 
@@ -10,7 +18,7 @@
 
 .aboutHeaderText {
   width: 60vw;
- padding-top: 10vh;
+ padding-top: 10%;
   font-size: 20px;
   font-family: Georgia, "Times New Roman", Times, serif;
   height: 40vh;
@@ -21,4 +29,35 @@
   box-shadow: -20px -11px 162px -176px rgba(192, 196, 18, 0.41);
   -webkit-box-shadow: -20px -11px 162px -176px rgba(192, 196, 18, 0.41);
   -moz-box-shadow: -20px -11px 162px -176px rgba(192, 196, 18, 0.41);
+}
+
+
+@media screen and (max-width: 650px) {
+
+  .aboutHeader {
+
+
+  
+    width: 85% !important;
+ 
+  }
+  .aboutContainer{
+    height: 80vh !important;
+    margin-bottom: 1rem !important;
+  }
+  .aboutHeaderText {
+    padding-top: 0vh !important;
+    height: 60vh;
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 400px) {
+
+  
+  
+  .aboutHeaderText {
+    height: 75vh;
+
+  }
+
 }

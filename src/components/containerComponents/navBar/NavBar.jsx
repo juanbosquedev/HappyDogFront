@@ -34,13 +34,13 @@ export default function NavBar({ entering, userLog }) {
 
   return (
     <Navbar className={`${Style.headNav} fixed-top bg-body-tertiary`}>
-      <Container className="col-lg-10 col-md-10 col-sm-10 pt-3 ms-md-5 ms-sm-1">
+      <Container className="col-lg-10 col-md-10 col-sm-10 pt-3 ms-md-5 ms-sm-1 ms-0">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav ">
           <Nav className="col-lg-12 col-md-10 col-sm-10 col-10 ps-lg-4 ps-md-1 ps-sm-1 pt-2">
             <Log userLog={userLog}></Log>
             <Nav.Link
-              className={`ms-lg-5 ${Style.hider}`}
+              className={`ms-lg-2 ${Style.hider}`}
               href="#home"
               disabled={entering}
             >

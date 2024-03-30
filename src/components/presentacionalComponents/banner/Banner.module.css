@@ -104,7 +104,7 @@
   .textContainerPdos {
     margin-top: 2%;
     align-self: center;
-    max-width: 80%;
+    max-width: 90%;
   }
 
   .customButton {
@@ -113,7 +113,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 520px) {
   .sectionTxtMain {
     font-size: 35px;
     max-width: 95%;

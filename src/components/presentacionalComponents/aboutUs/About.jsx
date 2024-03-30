@@ -2,7 +2,7 @@ import Style from "./About.module.css";
 
 function About() {
   return (
-    <div id="about" style={{ height: "95vh", backgroundColor: "#FFFBEA" }} >
+    <div id="about" className={Style.aboutContainer} >
       <div className="container mb-5">
         <div>
           <div style={{height:"70vh", margin:"auto"}}>
