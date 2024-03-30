@@ -3,29 +3,24 @@ import Style from "./Banner.module.css";
 
 function Banner() {
   return (
-    
-    <div id="home" className={` ${Style.bannerMain} mt-5 pt-5 `}>
-      <div className={`${Style.esferaContainer} col-6 `}>
-        <div>
-          <div className={`${Style.esfera} col-7 ms-5 mt-5`}>
+    <div id="home" className={` ${Style.bannerMain}   container-fluid vh-100`}>
+
+    <div className={` pt-5 row  h-100`}>
+      <div className={`${Style.sectionDog} container col-lg-6  `}>
+        
+          <div className={`${Style.esfera}  `}>
             <img
               src="https://res.cloudinary.com/dzux3ynpe/image/upload/v1710778779/happydog/maindoG_zdfhgp.png"
+              className="img-fluid"
               alt="dogBannerImage"
             />
           </div>
-        </div>
+     
       </div>
-      <div className={`col   text-container ${Style.textContainer}`}>
-        <div className="col  ">
+      <div className={`col  conteiner-fluid `}>
+        <div className={`${Style.sectionTxt} ps-lg-3 `}>
           <p
-            className="lh-2 "
-            style={{
-              fontFamily: "Volkhov",
-              fontWeight: 700,
-
-              fontSize: "50px",
-              color: "#222222",
-            }}
+            className={`${Style.sectionTxtMain}`}
           >
             DONDE LOS PERROS CONSIGUEN HOGAR
             <span style={{ color: "rgb(129, 204, 176)" }}> HAPPY DOG!</span>
@@ -35,7 +30,6 @@ function Banner() {
             style={{
               fontFamily: "Poppins",
               fontWeight: 400,
-
               fontSize: "20px",
               color: "#666",
             }}
@@ -43,13 +37,17 @@ function Banner() {
             Somos una comunidad en la que solucionamos la búsqueda y adopción de
             nuestros perros; haciendo seguimiento luego de guarda responsable.
           </p>
+          <div className={Style.customButton}>
+
           <CustomButton />
+          </div>
         </div>
         <h1 className={Style.titulo}>
           <br />
         </h1>
         <h2 className={Style.subtitulo}></h2>
       </div>
+    </div>
     </div>
   );
 }
