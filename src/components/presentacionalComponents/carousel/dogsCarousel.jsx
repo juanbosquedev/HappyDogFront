@@ -30,7 +30,7 @@ export const DogsCarousel = () => {
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 600, min: 0 },
       items: 1,
     },
   };
