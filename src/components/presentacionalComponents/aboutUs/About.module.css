@@ -56,7 +56,10 @@
   
   
   .aboutHeaderText {
-    height: 75vh;
+    width: 90vw;
+    height: 50vh;
+    overflow-y: scroll;
+    
 
   }
 

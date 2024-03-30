@@ -3,7 +3,6 @@
   display: block;
   margin: auto;
   font-weight: 400;
-  
 }
 
 .aboutHeaderText {
@@ -16,11 +15,40 @@
   -webkit-box-shadow: -20px -11px 162px -176px rgba(192, 196, 18, 0.41);
   -moz-box-shadow: -20px -11px 162px -176px rgba(192, 196, 18, 0.41);
 }
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
 
 .ourPage_card_effect {
-  transition: transform 0.5s ease !important; 
+  transition: transform 0.5s ease !important;
 }
 
 .ourPage_card_effect:hover {
-  transform: scale(1.1) !important; 
+  transform: scale(1.1) !important;
+}
+@media screen and (max-width: 1200px) {
+  .cardContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cardStyle {
+    display: flex;
+    justify-content: center;
+    width: 100% !important;
+  }
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .pageContainer{
+
+    height: 100vh;
+  }
+  .cardContainer {
+    grid-template-columns: 1fr;
+  }
 }
