@@ -2,6 +2,7 @@ import Style from "./About.module.css";
 
 function About() {
   return (
+    
     <div id="about" className={Style.aboutContainer} >
       <div className="container mb-5">
         <div>
