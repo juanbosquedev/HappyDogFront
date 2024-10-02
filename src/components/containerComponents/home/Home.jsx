@@ -31,7 +31,7 @@ function Home() {
 
   if (show && userLog) {
     const storedDogId = JSON.parse(localStorage.getItem("contactDogId"));
-    const dogInfo = dogs.find((dog) => dog.dataValues.id === storedDogId);
+    const dogInfo = dogs.find((dog) => dog.id === storedDogId);
     if (dogInfo) {
       const {
         id,
@@ -43,7 +43,7 @@ function Home() {
         height,
         life_span,
         personality,
-      } = dogInfo.dataValues;
+      } = dogInfo;
       const isCurrentUserOwner = false;
 
       modalContent = (
