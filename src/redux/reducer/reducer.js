@@ -55,7 +55,7 @@ const reducer = (state = initialState, action) => {
     case NEWDOG:
       return {
         ...state,
-        dogs: state.dogs.concat(action.payload),
+        // dogs: state.dogs.concat(action.payload),
       };
     case DELETE_DOG:
       return {

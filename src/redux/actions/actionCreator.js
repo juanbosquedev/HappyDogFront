@@ -16,14 +16,16 @@ export const UPDATE_DOG_ERROR = "UPDATE_DOG_ERROR";
 
 import axios from "axios";
 
-const API = import.meta.env.VITE_API_URL;
+const API_DOG = import.meta.env.VITE_API_DOG;
+const API_USER = import.meta.env.VITE_API_USER;
+
 
 export function userLog(user) {
   return async function (dispatch) {
     try {
-      const { data } = await axios.post(`${API}userLogin`, user);
+      const { data } = await axios.post(`${API_USER}userLogin`, user);
 
-      return dispatch({ type: LOGIN, payload: data.userFromDB });
+      return dispatch({ type: LOGIN, payload: data.user });
     } catch (error) {
       return dispatch({ type: LOGIN_ERROR, payload: error });
     }
@@ -33,7 +35,7 @@ export function userLog(user) {
 export const logout = () => {
   return async function (dispatch) {
     try {
-      const { data } = await axios.get(`${API}userLogout`);
+      const { data } = await axios.get(`${API_USER}userLogout`);
       return dispatch({ type: LOGOUT, payload: data });
     } catch (error) {
       return dispatch({
@@ -47,7 +49,7 @@ export const logout = () => {
 export function register(user) {
   return async function (dispatch) {
     try {
-      const { data } = await axios.post(`${API}userRegister`, user);
+      const { data } = await axios.post(`${API_USER}userRegister`, user);
       return dispatch({ type: REGISTER, payload: data });
     } catch (error) {
       return dispatch({
@@ -63,7 +65,7 @@ export function register(user) {
 export function getDogs() {
   return async function (dispatch) {
     try {
-      const { data } = await axios.get(`${API}allDogs`);
+      const { data } = await axios.get(`${API_DOG}`);
       return dispatch({ type: ALLDOGS, payload: data });
     } catch (error) {
       return dispatch({
@@ -77,7 +79,7 @@ export function getDogs() {
 export function newDog(dog) {
   return async function (dispatch) {
     try {
-      const { data } = await axios.post(`${API}newDog`, dog);
+      const { data } = await axios.post(`${API_DOG}`, dog);
       return dispatch({ type: NEWDOG, payload: data });
     } catch (error) {
       return dispatch({
@@ -91,7 +93,7 @@ export function newDog(dog) {
 export function deleteDog(dogId) {
   return async function (dispatch) {
     try {
-      const { data } = await axios.delete(`${API}dogDelete/${dogId}`);
+      const { data } = await axios.delete(`${API_DOG}/${dogId}`);
       return dispatch({ type: DELETE_DOG, payload: data });
     } catch (error) {
       return dispatch({
@@ -106,7 +108,7 @@ export function updateDog(updatedDog) {
   return async function (dispatch) {
     try {
       const { data } = await axios.put(
-        `${API}updateDog/${updatedDog.id}`,
+        `${API_DOG}/${updatedDog.id}`,
         updatedDog
       );
       return dispatch({ type: UPDATE_DOG, payload: data.dog });
