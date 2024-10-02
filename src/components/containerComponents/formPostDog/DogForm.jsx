@@ -17,7 +17,7 @@ export const DogForm = ({ handleClose, dog, editable, createDog }) => {
 
   const dogs = useSelector((state) => state.dogs);
 
-  const contactInfo = dogs.filter((dogy) => dogy.dataValues.id === dog.id);
+  const contactInfo = dogs.filter((dogy) => dogy.id === dog.id);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
