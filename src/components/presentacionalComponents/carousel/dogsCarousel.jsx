@@ -52,7 +52,7 @@ export const DogsCarousel = () => {
         {renderedDogs.length > 0 ? (
           renderedDogs.map((dog, index) => (
             <div key={index}>
-              <DogCard {...dog.dataValues} />
+              <DogCard {...dog} />
             </div>
           ))
         ) : (
