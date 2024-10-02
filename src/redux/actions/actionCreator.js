@@ -66,6 +66,7 @@ export function getDogs() {
   return async function (dispatch) {
     try {
       const { data } = await axios.get(`${API_DOG}`);
+      console.log(data);
       return dispatch({ type: ALLDOGS, payload: data });
     } catch (error) {
       return dispatch({
